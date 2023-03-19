@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JSSample</title>
+   <script>
+      function itemIndex1() {
+         var list = document.getElementsByTagName('LI')
+         for (var i=0;i < list.length; i++)
+            list[i].onclick = function() { alert(i) }
+      }
+      function itemIndex2() {
+            var list = document.getElementsByTagName('LI')
+            for( var i=0;i < list.length; i++)
+               list[i].onclick = alerter(i);
+            function alerter(a) {return function() {alert(a) } }
+      }
+      function itemIndex3() {
+         var list = document.getElementsByTagName('LI')
+         for (var i=0; i < list.length; i++)
+            list[i].onclick = alert(i)
+      }
+   </script>
+</head>
+<body onload="">
+<ol>
+   <li>First</li>
+   <li>Second</li>
+   <li>Third</li>
+</ol>
+</body>
+</html> 
